@@ -629,9 +629,11 @@ cc_library(
     copts = [
         "-DHAVE_VCS_VERSION_INC",
         "$(STACK_FRAME_UNLIMITED)",
-        "-Iclang/lib/Basic",
     ],
-    includes = ["include"],
+    includes = [
+        "include", 
+        "lib/Basic",
+    ],
     textual_hdrs = [
         # keep sorted
         "include/clang/Basic/AllDiagnosticKinds.inc",
